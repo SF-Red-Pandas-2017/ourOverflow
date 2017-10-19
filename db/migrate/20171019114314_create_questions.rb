@@ -3,6 +3,8 @@ class CreateQuestions < ActiveRecord::Migration[5.1]
     create_table :questions do |t|
       t.string  :title
       t.text  :question_body
+      t.integer :user_id
+
       t.timestamps
     end
   end

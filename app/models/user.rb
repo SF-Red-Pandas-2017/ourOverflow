@@ -1,5 +1,9 @@
 require 'bcrypt'
 class User < ActiveRecord::Base
+  has_many :votes, as: :voteable
+  has_many :questions
+  has_many :comments
+  has_many :answers
   include BCrypt
 
   def password
