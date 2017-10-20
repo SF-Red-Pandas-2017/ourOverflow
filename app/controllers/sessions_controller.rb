@@ -8,7 +8,7 @@ post '/sessions' do
     login(@user)
     redirect '/questions'
   else
-    @error_message = ["Invalid username or password"]
+    @errors = ["Invalid username or password"]
     erb :'sessions/new'
   end
 end

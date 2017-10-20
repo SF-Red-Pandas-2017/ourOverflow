@@ -1,4 +1,8 @@
-<h1>Please Answer The Question</h1>
-<form action="/answers" method="POST">
-  <textarea name="answer_body"></textarea>
+<h1>Please Answer The Question: <%=@question.title %></h1>
+<form action="/questions/<%= @question.id %>/answers" method="POST">
+  <input type="text" name="body" placeholder="Your answer">
+  <input type="submit" value="Done">
 </form>
+
+<a href="/questions/<%=@question.id %>">Cancel</a>
+
