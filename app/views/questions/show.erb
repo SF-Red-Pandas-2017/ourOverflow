@@ -1,0 +1,9 @@
+<h1>Question <%= @question.id %></h1>
+
+<h2><%= @question.title %></h2>
+<p>
+  <%= @question.question_body %>
+</p>
+
+<a href= '/questions/<%=@question.id%>/answers/new'><button id="new_comment_button">New Answer</button></a>
+<a href='/questions/<%=@question.id%>/comments/new'><button id="new_comment_button">New Comment</button></a>

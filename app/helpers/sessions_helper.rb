@@ -1,6 +1,6 @@
 helpers do
   def login(user)
-    sessions[:id] = user.id
+    session[:id] = @user.id
   end
 
   def current_user
