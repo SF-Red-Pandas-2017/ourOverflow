@@ -9,7 +9,8 @@ end
 
 post '/questions/:question_id/comments' do
   if logged_in?
-    @answer = Answer.create(body: params[:body], question_id: params[:question_id])
+    @question = Question.find(params[:question_id])
+    @comment = @question.comments.create(body: params[:body], user_id: session[:id])
     redirect("/questions/#{params[:question_id]}")
   else
     redirect('/questions')

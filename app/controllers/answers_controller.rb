@@ -1,5 +1,4 @@
 get '/questions/:question_id/answers/new' do
-  p session[:id]
   if logged_in?
     @question = Question.find(params[:question_id])
     erb :'answers/new'

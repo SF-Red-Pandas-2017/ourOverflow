@@ -7,3 +7,10 @@
 
 <a href= '/questions/<%=@question.id%>/answers/new'><button id="new_comment_button">New Answer</button></a>
 <a href='/questions/<%=@question.id%>/comments/new'><button id="new_comment_button">New Comment</button></a>
+
+<h3>Comments</h3>
+<% @question.comments.each do |comment| %>
+  <li><%= comment.body %> -by: <%= comment.user.username %>
+  </li>
+<% end %>
+
